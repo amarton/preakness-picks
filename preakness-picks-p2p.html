@@ -1,0 +1,176 @@
+
+
+
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+		 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+ 		<script src="http://data.baltimoresun.com/htmlstory-resources/preakness-picks/preakness-picks.js"></script>
+		 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+
+		<style type="text/css">
+
+		* {box-sizing:content-box;}
+
+
+			#container {
+				width:90%;
+				max-width: 600px;
+				padding-bottom:25px;
+
+			}
+
+
+			
+			p {	
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 1.25em;
+				margin-top: 2px;
+			}
+
+			.column {
+				float:left;
+				padding:1%;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 1em;
+			}
+
+			#race {
+				font-weight: bold;
+				font-size: 1em;
+				}
+
+			#nav {width:100%;margin:0 auto;text-align: center;font-size: 2em;}
+
+			#race {
+				   width: 100%;
+				   font-size: 2em;
+				  }
+
+			#analysis {
+				    width: 100%;
+				  }
+				#analysis::before {
+					    content:"ANALYSIS: ";
+				    	font-weight:bold;
+				    	font-size: 1.25em;
+				    	color:#337ab7;
+				  	}
+
+			#value {
+				    width: 100%;
+					  }
+					#value::before {
+					    content:"FOR VALUE: ";
+					    font-weight:bold;
+					    font-size: 1.25em;
+					    color:#337ab7;
+					}
+
+			#bet {
+				   width: 100%;
+				 }
+				#bet::before {
+				    content:"WHAT TO BET: ";
+				    font-weight:bold;
+				    font-size: 1.25em;
+				    color:#337ab7;
+				  }
+
+
+			.dropdown-menu li {padding:5px;cursor: pointer;}	  
+
+			.arrow {cursor: pointer;font-size: 1.5em;color: #337ab7;}
+
+
+			#prev a:link, #next a:link, #prev a:visited, #next a:visited {font-weight: bold;text-decoration: none;color: #337ab7;font-size: 2em;}
+
+		</style>
+
+
+
+
+
+
+
+
+	<!-- CONTAINER -->
+	<div id="container">
+
+
+	<p><a href="#">Download and print a PDF version here</a></p>
+	
+
+
+	 <div class="btn-group" id="testing">
+                <button class="btn btn-primary btn-lg dropdown-toggle" id="chooseDistrict" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <span id="chooseDistrictText">Choose race</span> <span class="caret"></span>
+                </button>
+                
+                <ul class="dropdown-menu"><!-- choose race district -->
+                  <li onClick="nextRace(1);" >Race 1: 10:30am</li>
+                  <li onClick="nextRace(2);">Race 2: 11:00am</li>
+                  <li onClick="nextRace(3);">Race 3:11:15am</li>
+                  <li onClick="nextRace(4);">Race 4:11:15am</li>
+                  <li onClick="nextRace(5);">Race 5:11:15am</li>
+                  <li onClick="nextRace(6);">Race 6:11:15am</li>
+                  <li onClick="nextRace(7);">Race 7:11:15am</li>
+                  <li onClick="nextRace(8);">Race 8:11:15am</li>
+                  <li onClick="nextRace(9);">Race 9:11:15am</li>
+                  <li onClick="nextRace(10);">Race 10:11:15am</li>
+                  <li onClick="nextRace(11);">Race 11:11:15am</li>
+                  <li onClick="nextRace(12);">Race 12:11:15am</li>
+                  <li onClick="nextRace(13);">Race 13:11:15am</li>
+                  <li onClick="nextRace(14);">Race 14:11:15am</li>
+                </ul>
+
+              </div>
+
+
+<br><br>
+
+		<!-- ROW -->
+
+		<div id="race" class="column">
+
+			Race 1: 10:30am
+			
+		</div>
+
+
+		<div id="analysis" class="column">
+
+			<p>Finnegan ships in from Keeneland, where he finished a tidy second in better company. La Nina and Sunshine Life also ship in from slightly classi- er racing circuits, and thus should improve off recent efforts.
+			
+		</div>
+
+		<div id="value" class="column">
+
+			<p>Sunshine Life finished third in a field of four at Aqueduct, but the class of that maiden race was better than the group she faces Saturday. Hard to say what she&rsquo;s got, but at 5-1, it&rsquo;s a decent value in an otherwise even field.
+			
+		</div>
+
+		<div id="bet" class="column">
+
+			<p>Take Finnegan to win. He looks to be the best. Wheel Finnegan with ALL in exacta wagers.
+			
+		</div>
+
+
+		<div id="nav">
+	
+		
+			<span id="prev" style="display:none;"> <span class="arrow" onClick="nextRace(prevlinkID);"> &#60; </span> </span> &nbsp;&nbsp;&nbsp;
+			<span id="next"> <span class="arrow" onClick="nextRace(nextlinkID);"> &#62; </span> </span>
+
+		</div>
+
+		<!-- /ROW -->
+
+
+
+
+	<!-- /CONTAINER -->
+	</div>

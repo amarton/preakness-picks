@@ -1,0 +1,246 @@
+
+<html>
+
+	<head>
+
+		<title>Preakness Betting Picks</title>
+
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+		 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+		 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+
+		<style type="text/css">
+
+			#container {
+				width:90%;
+				max-width: 600px;
+				margin:0 auto;
+			}
+
+			h1 {	
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 3em;
+				margin-bottom: 5px;
+				font-weight: bold;
+			}
+			
+			p {	
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 1.25em;
+				margin-top: 2px;
+			}
+
+			.column {
+				float:left;
+				padding:1%;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 1em;
+			}
+
+			#race {
+				font-weight: bold;
+				font-size: 1em;
+				}
+
+			#nav {width:100%;margin:0 auto;text-align: center;font-size: 2em;}
+
+			#race {
+				   width: 100%;
+				   font-size: 2.5em;
+				  }
+
+			#analysis {
+				    width: 100%;
+				  }
+				#analysis::before {
+					    content:"ANALYSIS: ";
+				    	font-weight:bold;
+				    	font-size: 1.5em;
+				    	color:#337ab7;
+				  	}
+
+			#value {
+				    width: 100%;
+					  }
+					#value::before {
+					    content:"FOR VALUE: ";
+					    font-weight:bold;
+					    font-size: 1.5em;
+					    color:#337ab7;
+					}
+
+			#bet {
+				   width: 100%;
+				 }
+				#bet::before {
+				    content:"WHAT TO BET: ";
+				    font-weight:bold;
+				    font-size: 1.5em;
+				    color:#337ab7;
+				  }
+
+
+			.dropdown-menu li {padding:5px;cursor: pointer;}	  
+
+
+			#prev a:link, #next a:link, #prev a:visited, #next a:visited {font-weight: bold;text-decoration: none;color: #337ab7;font-size: 2em;}
+
+		</style>
+
+
+
+
+
+	<script type="text/javascript">
+		
+
+		var data = [
+			{"id":"1","race":"Race 1: 10:30 am","analysis":"<p>Finnegan ships in from Keeneland, where he finished a tidy second in better company. La Nina and Sunshine Life also ship in from slightly classi- er racing circuits, and thus should improve off recent efforts.","value":"<p>Sunshine Life finished third in a field of four at Aqueduct, but the class of that maiden race was better than the group she faces Saturday. Hard to say what she’s got, but at 5-1, it’s a decent value in an otherwise even field.","bet":"<p>Take Finnegan to win. He looks to be the best. Wheel Finnegan with ALL in exacta wagers."},
+
+			{"id":"2","race":"Race 2: 11:00 am","analysis":"<p>Stolen Love has been running with better horses, so he should enjoy the drop in class. But this appears to be at the upper end of his distance ca- pability. He could be wobbly-legged in the final yards. Q’s Jack also has more class than most of these horses and has been in good form lately, hitting the board in six of his past 10 races. He should improve today with the drop in class.","value":"<p>Take Down Two has been in the money in four straight and also takes a drop in class Saturday. He should be pleased to take on the added distance.","bet":"<p>Very even field, so don’t get too fixated on one horse. Spread the wagers around on this one. Box Stolen Love, Q’s Jack, Take Down Two and Fish Whistler in exacta and trifecta wagers."},
+
+			{"id":"3","race":"Race 3: 11:15 am","analysis":"<p>Stolen Love has been running with better horses, so he should enjoy the drop in class. But this appears to be at the upper end of his distance ca- pability. He could be wobbly-legged in the final yards. Q’s Jack also has more class than most of these horses and has been in good form lately, hitting the board in six of his past 10 races. He should improve today with the drop in class.","value":"<p>Take Down Two has been in the money in four straight and also takes a drop in class Saturday. He should be pleased to take on the added distance.","bet":"<p>Very even field, so don’t get too fixated on one horse. Spread the wagers around on this one. Box Stolen Love, Q’s Jack, Take Down Two and Fish Whistler in exacta and trifecta wagers."}
+	
+		];
+
+
+
+		var nextlinkID = 2;
+		var prevlinkID = 1;
+
+
+		function nextRace(raceID){
+
+
+			$.each(data, function(idx, obj) {
+			 	if (obj.id == raceID) {
+				
+					race = obj.race;
+					analysis = obj.analysis;
+					value = obj.value;		
+					bet = obj.bet;					
+				}
+
+			});
+
+		  
+		  $('#race').html(race);
+		  $('#analysis').html(analysis);
+		  $('#value').html(value);
+		  $('#bet').html(bet);
+		   nextlinkID = ++raceID;
+		   prevlinkID = nextlinkID - 2;
+		   $('#chooseDistrictText').html(race);
+
+		   if (prevlinkID !== 0) {
+		
+				$('#prev').show();
+			} else {
+				$('#prev').hide();
+			}
+
+			//SET THIS NUMBER -- 4 -- THE HIGHEST RACE ID PLUS 1
+		   if (nextlinkID == 4) {
+		
+				$('#next').hide();
+			} else {
+				$('#next').show();
+			}
+
+
+
+		};
+
+
+
+
+
+
+
+	</script>
+
+
+
+
+	</head>
+
+	<body>
+
+	<!-- CONTAINER -->
+	<div id="container">
+
+
+	<h1>Preakness day picks</h1>
+	<p>By Liam Durbin | For The Baltimore Sun</p>
+	<p><a href="#">Download and print a PDF version here</a></p>
+	
+
+
+	 <div class="btn-group" id="testing">
+                <button class="btn btn-primary btn-lg dropdown-toggle" id="chooseDistrict" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <span id="chooseDistrictText">Choose race</span> <span class="caret"></span>
+                </button>
+                
+                <ul class="dropdown-menu"><!-- choose race district -->
+                  <li onClick="nextRace(1);" >Race 1: 10:30am</li>
+                  <li onClick="nextRace(2);">Race 2: 11:00am</li>
+                  <li onClick="nextRace(3);">Race 3:11:15am</li>
+                </ul>
+
+              </div>
+
+
+<br><br>
+
+		<!-- ROW -->
+
+		<div id="race" class="column">
+
+			Race 1: 10:30am
+			
+		</div>
+
+
+		<div id="analysis" class="column">
+
+			<p>Finnegan ships in from Keeneland, where he finished a tidy second in better company. La Nina and Sunshine Life also ship in from slightly classi- er racing circuits, and thus should improve off recent efforts.
+			
+		</div>
+
+		<div id="value" class="column">
+
+			<p>Sunshine Life finished third in a field of four at Aqueduct, but the class of that maiden race was better than the group she faces Saturday. Hard to say what she’s got, but at 5-1, it’s a decent value in an otherwise even field.
+			
+		</div>
+
+		<div id="bet" class="column">
+
+			<p>Take Finnegan to win. He looks to be the best. Wheel Finnegan with ALL in exacta wagers.
+			
+		</div>
+
+
+		<div id="nav">
+	
+		
+			<span id="prev" style="display:none;"> <a href="#" onClick="nextRace(prevlinkID);"> &#60; </a> </span> &nbsp;&nbsp;&nbsp;
+			<span id="next"> <a href="#" onClick="nextRace(nextlinkID);"> &#62; </a> </span>
+
+		</div>
+
+		<!-- /ROW -->
+
+
+
+
+	<!-- /CONTAINER -->
+	</div>
+
+	</body>
+
+</html>
